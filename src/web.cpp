@@ -118,8 +118,9 @@ void handleGetConfig(AsyncWebServerRequest *request){
 
 void setupWeb() {
 
+// updated Network Name 11/24/2022 Mark S
     wifiManager.setConnectRetries(10);
-    wifiManager.autoConnect("Silvia-AP");
+    wifiManager.autoConnect("LightningTemper");
 
     Serial.print("IP Address: ");
     Serial.println(WiFi.localIP());
