@@ -64,7 +64,7 @@ void loop() {
   time_now=millis();
   currentTemp = getCurrentTemperature();
 
-  if(abs(time_now-time_last)>=PID_INTERVAL or time_last > time_now) {
+  if(labs(time_now-time_last)>=PID_INTERVAL or time_last > time_now) {
     if( !overShootMode && abs(gTargetTemp-currentTemp)>=gOvershoot ) {        
       ESPPID.SetTunings(gaP, gaI, gaD);
       overShootMode=true;
